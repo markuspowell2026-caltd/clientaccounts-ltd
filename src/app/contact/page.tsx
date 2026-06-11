@@ -87,7 +87,7 @@ export default function ContactPage() {
   return (
     <>
       {/* ── HERO ── */}
-      <section className="relative gradient-hero bg-dot-navy py-20 lg:py-28 overflow-hidden">
+      <section className="relative hero-bg py-20 lg:py-28 overflow-hidden">
         <div className="absolute top-0 right-0 w-96 h-96 bg-gold-500/5 rounded-full blur-3xl" />
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 relative">
           <p className="inline-flex items-center gap-2 text-xs font-semibold tracking-widest uppercase text-gold-400 mb-5">

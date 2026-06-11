@@ -120,7 +120,7 @@ export default function HomePage() {
   return (
     <>
       {/* ── HERO ── */}
-      <section className="relative min-h-[92vh] flex items-center overflow-hidden gradient-hero bg-dot-navy">
+      <section className="relative min-h-[92vh] flex items-center overflow-hidden hero-bg">
         {/* Decorative blobs */}
         <div className="absolute top-1/4 right-0 w-[600px] h-[600px] bg-gold-500/5 rounded-full blur-3xl pointer-events-none" />
         <div className="absolute bottom-0 left-1/4 w-[400px] h-[400px] bg-navy-800/60 rounded-full blur-3xl pointer-events-none" />

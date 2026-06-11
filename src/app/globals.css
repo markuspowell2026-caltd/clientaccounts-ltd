@@ -75,6 +75,15 @@
   }
 }
 
+/* Hero sections: combined gradient + dot overlay in one background declaration */
+.hero-bg {
+  background-color: #070F22;
+  background-image:
+    radial-gradient(rgba(255,255,255,0.055) 1px, transparent 1px),
+    linear-gradient(135deg, #070F22 0%, #0D1B3E 55%, #1A2F5C 100%);
+  background-size: 28px 28px, 100% 100%;
+}
+
 @layer utilities {
   .bg-dot-navy {
     background-image: radial-gradient(rgba(255,255,255,0.08) 1px, transparent 1px);
