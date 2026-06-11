@@ -1,0 +1,111 @@
+@import url('https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800;900&display=swap');
+
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@layer base {
+  *, *::before, *::after { box-sizing: border-box; }
+
+  html { scroll-behavior: smooth; }
+
+  body {
+    font-family: 'Inter', system-ui, sans-serif;
+    color: #1a202c;
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale;
+    background-color: #ffffff;
+  }
+
+  h1, h2, h3, h4, h5, h6 {
+    font-weight: 700;
+    letter-spacing: -0.025em;
+    line-height: 1.2;
+  }
+}
+
+@layer components {
+  .btn-gold {
+    @apply inline-flex items-center gap-2 bg-gold-500 hover:bg-gold-600 text-navy-950 font-semibold px-7 py-3.5 rounded-lg transition-all duration-200 hover:shadow-lg hover:-translate-y-0.5 text-sm;
+  }
+
+  .btn-outline-white {
+    @apply inline-flex items-center gap-2 border-2 border-white/70 text-white hover:border-white hover:bg-white/10 font-semibold px-7 py-3.5 rounded-lg transition-all duration-200 text-sm;
+  }
+
+  .btn-navy {
+    @apply inline-flex items-center gap-2 bg-navy-900 hover:bg-navy-800 text-white font-semibold px-7 py-3.5 rounded-lg transition-all duration-200 hover:shadow-lg hover:-translate-y-0.5 text-sm;
+  }
+
+  .btn-outline-navy {
+    @apply inline-flex items-center gap-2 border-2 border-navy-900 text-navy-900 hover:bg-navy-900 hover:text-white font-semibold px-7 py-3.5 rounded-lg transition-all duration-200 text-sm;
+  }
+
+  .section-tag {
+    @apply inline-flex items-center gap-1.5 text-xs font-semibold tracking-widest uppercase text-gold-500 mb-4;
+  }
+
+  .section-tag::before {
+    content: '';
+    @apply block w-6 h-px bg-gold-500;
+  }
+
+  .gold-divider {
+    @apply w-12 h-0.5 bg-gold-500 rounded-full mt-4 mb-6;
+  }
+
+  .card-service {
+    @apply bg-white rounded-2xl p-8 border border-gray-100 shadow-sm transition-all duration-300 hover:-translate-y-1.5 hover:shadow-xl hover:border-gold-400/40 cursor-default;
+  }
+
+  .icon-circle {
+    @apply w-12 h-12 rounded-xl flex items-center justify-center bg-navy-900 text-gold-400 flex-shrink-0;
+  }
+
+  .icon-circle-sm {
+    @apply w-9 h-9 rounded-lg flex items-center justify-center bg-navy-900/8 text-navy-900 flex-shrink-0;
+  }
+
+  .feature-check {
+    @apply flex items-start gap-3 text-sm text-gray-600;
+  }
+
+  .stat-card {
+    @apply text-center p-6;
+  }
+}
+
+@layer utilities {
+  .bg-dot-navy {
+    background-image: radial-gradient(rgba(255,255,255,0.08) 1px, transparent 1px);
+    background-size: 28px 28px;
+  }
+
+  .bg-dot-gray {
+    background-image: radial-gradient(rgba(13,27,62,0.06) 1px, transparent 1px);
+    background-size: 28px 28px;
+  }
+
+  .text-gradient-gold {
+    background: linear-gradient(135deg, #C4A44A 0%, #EDD483 100%);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    background-clip: text;
+  }
+
+  .glow-gold {
+    box-shadow: 0 0 40px rgba(196, 164, 74, 0.25);
+  }
+}
+
+/* Delay utilities for staggered animations */
+.delay-100 { animation-delay: 100ms; }
+.delay-200 { animation-delay: 200ms; }
+.delay-300 { animation-delay: 300ms; }
+.delay-400 { animation-delay: 400ms; }
+.delay-500 { animation-delay: 500ms; }
+.delay-600 { animation-delay: 600ms; }
+.delay-700 { animation-delay: 700ms; }
+
+/* Opacity-0 start state for animated elements */
+.opacity-0-anim { opacity: 0; }
