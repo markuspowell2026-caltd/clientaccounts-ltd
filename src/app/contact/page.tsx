@@ -320,7 +320,7 @@ export default function ContactPage() {
                     </div>
                     <div>
                       <p className="text-xs text-gray-500 mb-0.5">Telephone</p>
-                      <p className="text-sm font-semibold text-navy-900">To be confirmed</p>
+                      <a href="tel:+447828754104" className="text-sm font-semibold text-navy-900 hover:text-gold-600 transition-colors">+44 7828 754104</a>
                     </div>
                   </div>
                   <div className="flex items-start gap-3">
