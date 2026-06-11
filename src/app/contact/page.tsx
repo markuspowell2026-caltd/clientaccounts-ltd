@@ -58,11 +58,9 @@ export default function ContactPage() {
     setStatus('sending')
 
     try {
-      // Replace YOUR_FORMSPREE_FORM_ID with your actual Formspree form ID
-      // Sign up free at https://formspree.io — takes 2 minutes
-      const res = await fetch('https://formspree.io/f/YOUR_FORMSPREE_FORM_ID', {
+      const res = await fetch('/api/contact', {
         method: 'POST',
-        headers: { 'Content-Type': 'application/json', Accept: 'application/json' },
+        headers: { 'Content-Type': 'application/json' },
         body: JSON.stringify({
           name:     form.name,
           email:    form.email,
@@ -70,7 +68,6 @@ export default function ContactPage() {
           business: form.business,
           services: form.services.join(', '),
           message:  form.message,
-          _subject: `New enquiry from ${form.name} — Client Accounts Ltd`,
         }),
       })
       if (res.ok) {
